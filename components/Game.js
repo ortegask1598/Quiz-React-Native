@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableHighlight, TextInput} from 'react-native';
+import {View, Text, TouchableHighlight, TextInput, Image} from 'react-native';
 
 
 export default function Game(props) {
@@ -10,8 +10,7 @@ export default function Game(props) {
     <>
     <View>{props.quiz.question}</View>
     <Image source={{uri: {fotoquizurl}}}></Image>
-    <TextInput style={} onChangeText={(ans) => props.save(ans)} placeholder='Respuesta'></TextInput>
-    <input  type="text" id="answer" placeholder="Answer"></input>
+    <TextInput onChangeText={(ans) => props.save(ans)} placeholder=''></TextInput>
     <Image source={{uri: {fotoautorurl}}}></Image>
     <Text > {props.quiz.author.username ? props.quiz.author.username : 'Anónimo'} </Text>
     <View>
